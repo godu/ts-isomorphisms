@@ -1,0 +1,23 @@
+{
+  "name": "typescript-isomorphisms",
+  "version": "1.0.0",
+  "description": "Adapted from https://github.com/paf31/purescript-isomorphisms",
+  "main": "index.js",
+  "files": [
+    "lib/index.js"
+  ],
+  "scripts": {
+    "prepare": "tsc",
+    "test": "tsc --noEmit"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.0.7",
+    "fp-ts": "^1.18.2",
+    "typescript": "^3.5.1"
+  },
+  "peerDependencies": {
+    "fp-ts": "^1.0.0"
+  }
+}
