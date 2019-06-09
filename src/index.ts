@@ -6,7 +6,12 @@ export type Void = never;
 export type Unit = void;
 export const unit: Unit = undefined;
 export type Absurd = () => never;
-export const absurd: Absurd = () => { throw new Error('Absurd function') };
+export class AbsurdError extends Error {
+  public constructor() {
+    super('Absurd function')
+  }
+};
+export const absurd: Absurd = () => { throw new AbsurdError() };
 
 export const prodIdent: {
   to: <A>(t: Tuple<Unit, A>) => A;
@@ -34,7 +39,7 @@ export const prodComm: {
 
 export const prodZeroZero: {
   to: <A>(t: Tuple<Void, A>) => Void;
-  from: <A>(v: Void) => Tuple<Void, A>;
+  from: <A>() => Tuple<Void, A>;
 } = {
   to: t => t.fst,
   from: absurd

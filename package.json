@@ -8,13 +8,15 @@
   ],
   "scripts": {
     "prepare": "tsc",
-    "test": "tsc --noEmit"
+    "pretest": "tsc --noEmit",
+    "test": "ts-node test"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^12.0.7",
     "fp-ts": "^1.18.2",
+    "ts-node": "^8.2.0",
     "typescript": "^3.5.1"
   },
   "peerDependencies": {
